@@ -1,14 +1,14 @@
 void setup(){
-  size(800,600);
-  background(0);
+  size(800,600); //set size
+  background(0); //set background
   
 }
 
 void draw(){
-  if(keyPressed == true){
+  if(keyPressed == true){ //if the key is pressed a square is drawn
     drawSquare();
   }
-  if(mousePressed){
+  if(mousePressed){ //if the mouse is pressed circles are drawn
    drawCircle(0,200,55); 
   }
  
@@ -16,18 +16,22 @@ void draw(){
 
 
 
+//define drawSquare funtion
 void drawSquare(){
-  fill(0,100,255);
-  stroke(0);
-  rect(375,275,50,50);
+  fill(0,100,255);       //set fill
+  stroke(0);             //stroke
+  rect(375,275,50,50);   //location of square
 }
 
-void drawCircle(int R, int G, int B){
- fill(R,G,B);
- noStroke();
- float diam=20;
- ellipse(mouseX,mouseY,diam,diam);
+//define drawCircle function
+void drawCircle(int R, int G, int B){   //set parameters as integers for color
+ fill(R,G,B);                           //fill will be determined by user input
+ noStroke();                            //noStroke
+ float diam=20;                         //create a variable for size
+ ellipse(mouseX,mouseY,diam,diam);      //draw an ellipse at the mouse location
 }
+
+
   
 
 
